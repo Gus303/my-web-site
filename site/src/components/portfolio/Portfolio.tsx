@@ -1,6 +1,6 @@
 import "./Portfolio.css"
 
-const Portfolio = () => {
+function Portfolio() {
     return (
         <div className="portfolio">
             Portfolio

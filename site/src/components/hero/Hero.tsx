@@ -1,11 +1,9 @@
 import "./Hero.css"
-
-const Hero = () => {
+function Hero() {
     return (
         <div className="hero">
             Hero
         </div>
     )
 }
-
 export default Hero

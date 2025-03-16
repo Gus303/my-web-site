@@ -1,6 +1,5 @@
 import "./Contact.css"
-
-const Contact = () => {
+function Contact(){
     return (
         <div className="contact">
             Contact
