@@ -75,14 +75,14 @@
     align-items: end;
 }
 
-.contactLink{
-    margin-top: 80vh;
 
+
+.contactLink{
+    margin-bottom: 50px;
 }
 
 .contatcButton{
-    
-    position: absolute;
+    position: relative;
 }
 
 .circleText{
@@ -91,10 +91,10 @@
 }
 
 .arrow{
-    position: relative;
+    position: absolute;
     top: 1;
-    bottom: 10vh;
-    left: 1.5vh;
+    bottom: 2.5vh;
+    left: 2.5vh;
     right: 0;
     margin: auto;
     width: 80px;

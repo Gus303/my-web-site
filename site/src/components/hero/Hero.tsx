@@ -69,8 +69,12 @@ function Hero() {
             </motion.a>
             </div>
             <div className="hSection right">
+                <div></div>
                 <a href="/#contacts" className="contactLink">
-                <div className="contactButton">
+                <motion.div 
+                animate={{rotate:[0,360]}}
+                transition={{ duration:10, repeat:Infinity, ease:"linear" }} 
+                className="contactButton">
                     <svg viewBox="0 0 200 200" width="150" height="150">
                         <circle cx="100" cy="100" r="90" fill="white" />
                         <path
@@ -107,7 +111,7 @@ function Hero() {
                     </svg>
                  </div>
 
-                </div>
+                </motion.div>
                 </a>
             </div>
         </div>
