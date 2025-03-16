@@ -5,11 +5,22 @@ import Contact from './components/contact/Contact'
 
 function App() {
   return (
-    <div className=''>
-      <Hero />
-      <Works />
-      <Portfolio />
-      <Contact />
+    <div className='container'>
+      <section id='#home'>
+        <Hero />
+      </section>
+
+      <section id='#services'>
+        <Works />
+      </section>
+
+      <section id='#portfolio'>
+        <Portfolio />
+      </section>
+
+      <section id='#contact'>
+       <Contact />
+      </section>
     </div>
   )
 }
