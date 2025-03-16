@@ -1,38 +1,72 @@
 import "./Hero.css"
+import { motion } from "@motionone/react";
+
 function Hero() {
     return (
         <div className="hero">
+            {/* Background */}
+            <div className="bg">
+                <div className="hImg">
+                    <img src="/mebg.png" alt="my as a draw" />
+                </div>
+            </div>
+            {/* Left Section */}
             <div className="hSection left">
-                <h1 className="hTitle">
+                {/* Title */}
+                <motion.h1 
+                initial={{ y: -100, opacity: 0 }} 
+                animate={{y: 0, opacity: 1}}
+                transition={{duration:1}}
+                className="hTitle">
                     Hello,
                     <br/>
                     <span>Be Welcome</span>
-                </h1>
-                <div className="social">
-                    <h2>How to reach me</h2>
-                    <div className="socialList">
-                        <a href="#"><img src="/github.svg" alt="Github" /></a>
-                        <a href="#"><img src="/linkedin.svg" alt="LinkedIn" /></a>
-                        <a href="#"><img src="/instagram.svg" alt="Instagram" /></a>
-                        <a href="#"><img src="/dribbble.svg" alt="Dribbble" /></a>
-                    </div>
+                </motion.h1>
+            {/* Social */}
+            <div >
+            <motion.h2 initial={{ x: -100, opacity: 0 }} 
+            animate={{x: 0, opacity: 1}}
+            transition={{duration:1}}
+            >How to reach me</motion.h2>
+                <div className="socialList">
+                    <motion.a initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.3 }}   href="#"><img src="/github.svg" alt="Github" /></motion.a>
+                    <motion.a initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.6 }}  href="#"><img src="/linkedin.svg" alt="LinkedIn" /></motion.a>
+                    <motion.a initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.9 }}  href="#"><img src="/instagram.svg" alt="Instagram" /></motion.a>
+                    <motion.a initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 1.2 }}  href="#"><img src="/dribbble.svg" alt="Dribbble" /></motion.a>
                 </div>
-                <a href="#services" className="scroll">
-                    <svg 
-                    width="50px"
-                    height="50px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="https://www.w3.org/2000/svg">
-                        <path d="M5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9Z"
-                        stroke="white"
-                        strokeWidth="1"/>
-                        <path d="M12 5V8" 
-                        stroke="white"  
-                        strokeWidth="1" 
-                        strokeLinecap="round"/>
-                    </svg>
-                </a>
+            </div>
+            {/* Services */}
+            <motion.a 
+            animate={{y:[0,5], 
+            opacity:[0,1,0]}}
+            transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}  
+            href="#services" className="scroll">
+                <svg 
+                width="50px"
+                height="50px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="https://www.w3.org/2000/svg">
+                <path d="M5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9Z"
+                stroke="white"
+                strokeWidth="1"/>
+                <motion.path
+                animate={{y:[0,5]}}
+                transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}
+                d="M12 5V8" 
+                stroke="white"  
+                strokeWidth="1" 
+                strokeLinecap="round"/>
+                </svg>
+            </motion.a>
             </div>
             <div className="hSection right">
                 <a href="/#contacts" className="contactLink">
@@ -75,11 +109,6 @@ function Hero() {
 
                 </div>
                 </a>
-            </div>
-            <div className="bg">
-                <div className="hImg">
-                    <img src="/mebg.png" alt="my as a draw" />
-                </div>
             </div>
         </div>
     )
