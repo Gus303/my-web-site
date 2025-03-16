@@ -100,3 +100,66 @@
     width: 80px;
     height: 80px;
 }
+
+@media (max-width:1546px){
+    .hTitle{
+        font-size: 72px;
+    }
+}
+
+@media (max-width:1280px){
+    .bg{
+        height: 70%;
+        top: 30%;
+        bottom: 0;
+    }
+
+    .social{
+        width: 60%;
+    }
+
+    .hImg{
+        height: 100%;
+    }
+}
+
+@media (max-width:1024px){
+    .bg{
+        height: 70%;
+    }
+
+    .hTitle{
+        font-size: 62px;
+    }
+}
+
+@media (max-width:768px){
+    .hero{
+        flex-direction: column;
+    }
+    .bg{
+        height: 70%;
+    }
+
+    .hSection{
+        width: 100%;
+    }
+
+    .hSection.left{
+        align-items: center;
+        text-align: center;
+        gap: 36px;
+    }
+
+    .hSection.right{
+        justify-content: end;
+    }
+
+    .socialList{
+        justify-content: center;
+    }
+
+    .hTitle{
+        font-size: 48px;
+    }
+}
