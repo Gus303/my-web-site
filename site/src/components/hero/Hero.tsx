@@ -11,13 +11,13 @@ function Hero() {
                 <div className="social">
                     <h2>How to reach me</h2>
                     <div className="socialList">
-                        <img src="/github.svg" alt="Github" />
-                        <img src="/linkedin.svg" alt="LinkedIn" />
-                        <img src="/instagram.svg" alt="Instagram" />
-                        <img src="/dribbble.svg" alt="Dribbble" />
+                        <a href="#"><img src="/github.svg" alt="Github" /></a>
+                        <a href="#"><img src="/linkedin.svg" alt="LinkedIn" /></a>
+                        <a href="#"><img src="/instagram.svg" alt="Instagram" /></a>
+                        <a href="#"><img src="/dribbble.svg" alt="Dribbble" /></a>
                     </div>
                 </div>
-                <a href="#services">
+                <a href="#services" className="scroll">
                     <svg 
                     width="50px"
                     height="50px"
@@ -48,10 +48,10 @@ function Hero() {
                             <textPath href="#innerCirlePath">Contact me</textPath>
                         </text>
                         <text className="circleText">
-                            <textPath href="#innerCirlePath" startOffset="85%">•</textPath>
+                            <textPath href="#innerCirlePath" startOffset="91%">•</textPath>
                         </text>
                         <text className="circleText">
-                            <textPath href="#innerCirlePath" startOffset="35%">•</textPath>
+                            <textPath href="#innerCirlePath" startOffset="41%">•</textPath>
                         </text>
                         <text className="circleText">
                             <textPath href="#innerCirlePath" startOffset="50%">Contact me</textPath>
@@ -75,6 +75,11 @@ function Hero() {
 
                 </div>
                 </a>
+            </div>
+            <div className="bg">
+                <div className="hImg">
+                    <img src="/mebg.png" alt="my as a draw" />
+                </div>
             </div>
         </div>
     )
