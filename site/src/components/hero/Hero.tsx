@@ -1,11 +1,14 @@
 
 import "./Hero.css"
-import { motion } from "@motionone/react";
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import Shape from './Shape'
 import { Suspense } from "react";
 
-function Hero() {
+export default function Hero() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { triggerOnce: true });
     return (
         <div className="hero">
             {/* Background */}
@@ -24,8 +27,9 @@ function Hero() {
             <div className="hSection left">
                 {/* Title */}
                 <motion.h1 
-                initial={{ y: -100, opacity: 0 }} 
-                animate={{y: 0, opacity: 1}}
+                ref={ref}
+                initial={{ x: -20, opacity: 0 }} 
+                animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{duration:1}}
                 className="hTitle">
                     Hello,
@@ -34,23 +38,37 @@ function Hero() {
                 </motion.h1>
             {/* Social */}
             <div className="social">
-            <motion.h2 initial={{ x: -100, opacity: 0 }} 
-            animate={{x: 0, opacity: 1}}
+            <motion.h2 
+            ref={ref}
+            initial={{ x: -20, opacity: 0 }} 
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{duration:1}}
             >How to reach me</motion.h2>
                 <div className="socialList">
-                    <motion.a initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 0.3 }}   href="#"><img src="/github.svg" alt="Github" /></motion.a>
-                    <motion.a initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 0.6 }}  href="#"><img src="/linkedin.svg" alt="LinkedIn" /></motion.a>
-                    <motion.a initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 0.9 }}  href="#"><img src="/instagram.svg" alt="Instagram" /></motion.a>
-                    <motion.a initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, delay: 1.2 }}  href="#"><img src="/dribbble.svg" alt="Dribbble" /></motion.a>
+                    <motion.a 
+                    ref={ref} 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { x: 0, opacity: 1 } : {}}
+                    transition={isInView ? { duration: 1, delay: 0.3 } : {duration:0}}
+                    href="#"><img src="/github.svg" alt="Github" /></motion.a>
+                    <motion.a 
+                    ref={ref} 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { x: 0, opacity: 1 } : {}}
+                    transition={isInView ? { duration: 1, delay: 0.6 } : {duration:0}}
+                    href="#"><img src="/linkedin.svg" alt="LinkedIn" /></motion.a>
+                    <motion.a 
+                    ref={ref} 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { x: 0, opacity: 1 } : {}}
+                    transition={isInView ? { duration: 1, delay: 0.9 } : {duration:0}} 
+                    href="#"><img src="/instagram.svg" alt="Instagram" /></motion.a>
+                    <motion.a 
+                    ref={ref} 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { x: 0, opacity: 1 } : {}} 
+                    transition={isInView ? { duration: 1, delay: 1.2 } : {duration:0}}
+                    href="#"><img src="/dribbble.svg" alt="Dribbble" /></motion.a>
                 </div>
             </div>
             {/* Services */}
@@ -127,4 +145,3 @@ function Hero() {
         </div>
     )
 }
-export default Hero
