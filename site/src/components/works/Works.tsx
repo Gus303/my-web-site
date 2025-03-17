@@ -1,8 +1,14 @@
+import ComputerModelContainer from "./computer/ComputerModelContainer"
 import "./Works.css"
+
+
 function Works() {
     return(
         <div className="works">
-            Works
+            <div className="sSection left"></div>
+            <div className="sSection right">
+                <ComputerModelContainer />
+            </div>
         </div>
     )
 }

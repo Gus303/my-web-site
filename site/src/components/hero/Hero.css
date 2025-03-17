@@ -15,17 +15,19 @@
 
 .hImg{
     position: absolute;
+    top: 25%;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    height: 75%;
+    height: 90%;
     width: max-content;
 }
 
 .hImg img{
+    border-radius: 40%;
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: cover;
 }
 
@@ -40,7 +42,7 @@
 .hTitle{
     margin-top: 50px;
     font-size: 100px;
-    color: blueviolet;
+    color: #0068E0;
 }
 .hTitle span{
     color: white;
@@ -109,8 +111,8 @@
 
 @media (max-width:1280px){
     .bg{
-        height: 70%;
-        top: 30%;
+        height: 90%;
+        top: 7%;
         bottom: 0;
     }
 
@@ -125,7 +127,7 @@
 
 @media (max-width:1024px){
     .bg{
-        height: 70%;
+        height: 85%;
     }
 
     .hTitle{
@@ -138,7 +140,8 @@
         flex-direction: column;
     }
     .bg{
-        height: 70%;
+        top: 20%;
+        height: 80%;
     }
 
     .hSection{

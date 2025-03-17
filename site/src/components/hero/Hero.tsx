@@ -1,11 +1,21 @@
+
 import "./Hero.css"
 import { motion } from "@motionone/react";
+import { Canvas } from "@react-three/fiber";
+import Shape from './Shape'
+import { Suspense } from "react";
 
 function Hero() {
     return (
         <div className="hero">
             {/* Background */}
             <div className="bg">
+                  {/* 3d img */}
+            <Canvas>
+                <Suspense fallback="loading...">
+                  <Shape />
+                </Suspense>
+            </Canvas>
                 <div className="hImg">
                     <img src="/mebg.png" alt="my as a draw" />
                 </div>
@@ -23,7 +33,7 @@ function Hero() {
                     <span>Be Welcome</span>
                 </motion.h1>
             {/* Social */}
-            <div >
+            <div className="social">
             <motion.h2 initial={{ x: -100, opacity: 0 }} 
             animate={{x: 0, opacity: 1}}
             transition={{duration:1}}
@@ -76,7 +86,7 @@ function Hero() {
                 transition={{ duration:10, repeat:Infinity, ease:"linear" }} 
                 className="contactButton">
                     <svg viewBox="0 0 200 200" width="150" height="150">
-                        <circle cx="100" cy="100" r="90" fill="white" />
+                        <circle cx="100" cy="100" r="90" fill="#01BDE1" />
                         <path
                         id="innerCirlePath"
                         fill="none"
