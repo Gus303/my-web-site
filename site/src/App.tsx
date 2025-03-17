@@ -1,6 +1,6 @@
 import Hero from './components/hero/Hero'
 import Works from './components/works/Works'
-import Portfolio from './components/portfolio/Portfolio'
+import aboutMe from './components/aboutMe/aboutMe'
 import Contact from './components/contact/Contact'
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <Works />
       </section>
 
-      <section id='#portfolio'>
-        <Portfolio />
+      <section id='#aboutMe'>
+        <aboutMe />
       </section>
 
       <section id='#contact'>

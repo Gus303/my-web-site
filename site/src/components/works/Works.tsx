@@ -3,8 +3,6 @@ import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import ComputerModelContainer from "./computer/ComputerModelContainer"
-import DataModelContainer from "./data_mo/DataModelContainer"
-import PencilModelContainer from "./pencil/PencilModelContainer"
 import Counter from "./Counter"
 
 const weekers = [
@@ -45,7 +43,6 @@ export default function Works() {
                          transition={isInView ? { duration: 1, delay: 0.8 }: {duration:0} } 
                         className="weekers" 
                         key={weeker.id}
-                        onClick={()=> setCurrentWorkId(weeker.id)}
                         >
                             <div className="weekerIcon">
                                 <img src={weeker.img} alt={weeker.title} />
@@ -64,7 +61,7 @@ export default function Works() {
             </div>
             <div className="sSection right">
                {
-                 currentWorkId === 1 ? (<ComputerModelContainer/>) : currentWorkId === 2 ? (<DataModelContainer/>) : <PencilModelContainer/>
+                 <ComputerModelContainer/>
                }
             </div>
         </div>
