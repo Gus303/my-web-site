@@ -16,6 +16,9 @@
     "framer-motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-lazy-load": "^4.0.1",
+    "react-lazyload": "^3.2.1",
+    "react-router-dom": "^7.3.0",
     "site": "file:",
     "three": "^0.174.0"
   },

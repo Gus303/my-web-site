@@ -1,4 +1,3 @@
-
 import "./Hero.css"
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -47,27 +46,31 @@ export default function Hero() {
                 <div className="socialList">
                     <motion.a 
                     ref={ref} 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { x: 0, opacity: 1 } : {}}
-                    transition={isInView ? { duration: 1, delay: 0.3 } : {duration:0}}
+                    initial={{ opacity: 0, y: -20, scale: 1 }}
+                    animate={isInView ? { y: 0, opacity: 1, type: "spring", stiffness: 300 } : {}}
+                    transition={isInView ? { duration: 1,  ease: "easeOut" } : {duration:0}}
+                    whileHover={{ scale: 1.2 }}
                     href="#"><img src="/github.svg" alt="Github" /></motion.a>
                     <motion.a 
                     ref={ref} 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { x: 0, opacity: 1 } : {}}
-                    transition={isInView ? { duration: 1, delay: 0.6 } : {duration:0}}
+                    initial={{ opacity: 0, y: -40 }}
+                    animate={isInView ? { y: 0, opacity: 1, type: "spring", stiffness: 300 } : {}}
+                    transition={isInView ? { duration: 1,  ease: "easeOut" } : {duration:0}}
+                    whileHover={{ scale: 1.2 }}
                     href="#"><img src="/linkedin.svg" alt="LinkedIn" /></motion.a>
                     <motion.a 
                     ref={ref} 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { x: 0, opacity: 1 } : {}}
-                    transition={isInView ? { duration: 1, delay: 0.9 } : {duration:0}} 
+                    initial={{ opacity: 0, y: -60 }}
+                    animate={isInView ? { y: 0, opacity: 1, type: "spring", stiffness: 300 } : {}}
+                    transition={isInView ? { duration: 1,  ease: "easeOut" } : {duration:0}} 
+                    whileHover={{ scale: 1.2 }}
                     href="#"><img src="/instagram.svg" alt="Instagram" /></motion.a>
                     <motion.a 
                     ref={ref} 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { x: 0, opacity: 1 } : {}} 
-                    transition={isInView ? { duration: 1, delay: 1.2 } : {duration:0}}
+                    initial={{ opacity: 0, y: -80 }}
+                    animate={isInView ? { y: 0, opacity: 1, type: "spring", stiffness: 300 } : {}} 
+                    transition={isInView ? { duration: 1,  ease: "easeOut" } : {duration:0}}
+                    whileHover={{ scale: 1.2 }}
                     href="#"><img src="/dribbble.svg" alt="Dribbble" /></motion.a>
                 </div>
             </div>
@@ -98,7 +101,7 @@ export default function Hero() {
             </div>
             <div className="hSection right">
                 <div></div>
-                <a href="/#contacts" className="contactLink">
+                <a href="#contact" className="contactLink">
                 <motion.div 
                 animate={{rotate:[0,360]}}
                 transition={{ duration:10, repeat:Infinity, ease:"linear" }} 

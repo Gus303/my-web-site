@@ -18,7 +18,7 @@ const weekers = [
     },
     {
         id: 3,
-        img: "data_icon.png",
+        img: "design_icon.png",
         title: "Web Design",
     }
 ];
@@ -34,17 +34,18 @@ export default function Works() {
                 initial={{ x: -20, opacity: 0 }} 
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{duration:1}}
-                className="sTitle">{isInView ? "How do I help" : ""}</motion.h1>
+                className="sTitle">{isInView ? "How do I help ?" : ""}</motion.h1>
                 <div className="serviceList">
                 {weekers.map((weeker) => (
                         <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { x: 0, opacity: 1 } : {}}
-                         transition={isInView ? { duration: 1, delay: 0.8 }: {duration:0} } 
+                        transition={isInView ? { duration: 1, delay: 0.8,  }: {duration:0} } 
                         className="weekers" 
                         key={weeker.id}
                         >
-                            <div className="weekerIcon">
+                            <div
+                            className="weekerIcon">
                                 <img src={weeker.img} alt={weeker.title} />
                             </div>
                             <h2>{weeker.title}</h2>

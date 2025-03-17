@@ -6,16 +6,14 @@
 
 .sSection{
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
 }
 
 .sTitle{
     font-size: 88px;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 24px;
 }
 
 .serviceList{
@@ -50,13 +48,13 @@
 }
 
 .weekers:nth-child(1) .weekerIcon{
-    background-color: #00ACE0;
+    background-color: white;
 }
 .weekers:nth-child(2) .weekerIcon{
-    background-color: #00ACE0;
+    background-color: white;
 }
 .weekers:nth-child(3) .weekerIcon{
-    background-color: #00ACE0;
+    background-color: white;
 }
 
 .counterList{
@@ -101,24 +99,24 @@
 
 @media (max-width:1024px) {
     .sTitle{
-        font-size: 48px;
+        font-size: 68px;
     }
     .works, .counterList{
-        align-items: center;
-        justify-content: center;
-        width: 70%;
+        
     }
 }
 
 @media (max-width:1024px) {
     .works{
-        align-items: center;
-        justify-content: center;
+        
     }
     .sSection{
         width: 100%;
+        align-items: center;
+        justify-content: center;
     }
     .sSection.right{
+        align-items: end;
         display: none;
     }
     .counter{

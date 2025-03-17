@@ -1,7 +1,7 @@
-import "./aboutMe.css";
+import "./AboutMe.css";
 
-export default function aboutMe() {
+export default function AboutMe() {
     return (
-    <div className="aboutMe"></div>
+    <div className="aboutMe">About me</div>
   );
 }
