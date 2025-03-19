@@ -24,6 +24,7 @@
     width: max-content;
 }
 
+
 .hImg img{
     border-radius: 40%;
     width: 100%;
@@ -78,31 +79,6 @@
     align-items: end;
 }
 
-
-
-.contactLink{
-    margin-bottom: 50px;
-}
-
-.contatcButton{
-    position: relative;
-}
-
-.circleText{
-    font-size: 20px;
-    letter-spacing: 4px;
-}
-
-.arrow{
-    position: absolute;
-    top: 1;
-    bottom: 2.5vh;
-    left: 2.5vh;
-    right: 0;
-    margin: auto;
-    width: 80px;
-    height: 80px;
-}
 
 @media (max-width:1546px){
     .hTitle{

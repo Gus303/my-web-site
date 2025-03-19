@@ -1,8 +1,8 @@
 import "./Hero.css"
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
 import Shape from './Shape'
+import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 
 export default function Hero() {
@@ -13,11 +13,11 @@ export default function Hero() {
             {/* Background */}
             <div className="bg">
                   {/* 3d img */}
-            <Canvas>
-                <Suspense fallback="loading...">
+                  <Canvas>
+                 <Suspense fallback="loading...">
                   <Shape />
-                </Suspense>
-            </Canvas>
+                 </Suspense>
+                 </Canvas>
                 <div className="hImg">
                     <img src="/mebg.png" alt="my as a draw" />
                 </div>
@@ -75,7 +75,7 @@ export default function Hero() {
                 </div>
             </div>
             {/* Services */}
-            <motion.a 
+            <motion.div 
             animate={{y:[0,5], 
             opacity:[0,1,0]}}
             transition={{repeat:Infinity,duration:4,ease:"easeInOut"}}  
@@ -97,53 +97,9 @@ export default function Hero() {
                 strokeWidth="1" 
                 strokeLinecap="round"/>
                 </svg>
-            </motion.a>
+            </motion.div>
             </div>
             <div className="hSection right">
-                <div></div>
-                <a href="#contact" className="contactLink">
-                <motion.div 
-                animate={{rotate:[0,360]}}
-                transition={{ duration:10, repeat:Infinity, ease:"linear" }} 
-                className="contactButton">
-                    <svg viewBox="0 0 200 200" width="150" height="150">
-                        <circle cx="100" cy="100" r="90" fill="#01BDE1" />
-                        <path
-                        id="innerCirlePath"
-                        fill="none"
-                        d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
-                        />
-                        <text className="circleText">
-                            <textPath href="#innerCirlePath">Contact me</textPath>
-                        </text>
-                        <text className="circleText">
-                            <textPath href="#innerCirlePath" startOffset="91%">•</textPath>
-                        </text>
-                        <text className="circleText">
-                            <textPath href="#innerCirlePath" startOffset="41%">•</textPath>
-                        </text>
-                        <text className="circleText">
-                            <textPath href="#innerCirlePath" startOffset="50%">Contact me</textPath>
-                        </text>
-                    </svg>
-                    
-                    <div className="arrow">
-                    <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 24 24"
-                         width="50"
-                         height="50"
-                         fill="none"
-                         stroke="black"
-                        strokeWidth="2"
-                    >
-                    <line x1="6" y1="18" x2="18" y2="6" />
-                    <polyline points="9 6 18 6 18 15" />
-                    </svg>
-                 </div>
-
-                </motion.div>
-                </a>
             </div>
         </div>
     )
