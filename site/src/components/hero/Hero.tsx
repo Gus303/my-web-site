@@ -13,7 +13,7 @@ export default function Hero() {
             {/* Background */}
             <div className="bg">
                   {/* 3d img */}
-                  <Canvas>
+                  <Canvas camera={{ position: [2, 2, 5] }}>
                  <Suspense fallback="loading...">
                   <Shape />
                  </Suspense>
