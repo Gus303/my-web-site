@@ -9,8 +9,6 @@ import LazyLoad from "react-lazy-load"
 
 const Hero = lazy(()=>import("./components/hero/Hero"))
 const Works = lazy(()=>import("./components/works/Works"))
-const AboutMe = lazy(()=>import("./components/aboutMe/AboutMe"))
-const Contact = lazy(()=>import("./components/contact/Contact"))
 
 function App() {
   return (
@@ -27,22 +25,6 @@ function App() {
       <LazyLoad height={"100vh"} offset={-100}>
       <section id='services'>
         <Works />
-      </section>
-      </LazyLoad>
-      </Suspense>
-
-      <Suspense fallback={""}>
-      <LazyLoad height={"100vh"} offset={-100}>
-      <section id='aboutMe'>
-        <AboutMe />
-      </section>
-      </LazyLoad>
-      </Suspense>
-
-      <Suspense fallback={""}>
-      <LazyLoad height={"100vh"} offset={-100}>
-      <section id='contact'>
-       <Contact />
       </section>
       </LazyLoad>
       </Suspense>
